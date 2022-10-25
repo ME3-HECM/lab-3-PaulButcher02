@@ -11,6 +11,7 @@ void Interrupts_init(void){
     PIE2bits.C1IE =1; 	//enable interrupt source C1I
     INTCONbits.GIE=1; 	//turn on interrupts globally (when this is off, all interrupts are deactivated)
     INTCONbits.PEIE=1; //enable peripheral interupts
+    
     LATHbits.LATH3=0; //set initial output state of LED
     TRISHbits.TRISH3=0; //set TRIS value for pin (output)
     
