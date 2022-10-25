@@ -16,18 +16,10 @@
 
 void main(void) {
 	//call your initialisation functions to set up the hardware modules
-    Comp1_init();
     Interrupts_init();
     Timer0_init();
     LEDarray_init(); 
     while (1) {
-//		
-//        if (triggered==1){ //if interrupt occurred, other LED turns on (experimenting with global variables)
-//            __delay_ms(50);
-//            LATDbits.LATD7=1;
-//            triggered=0;
-//        }
-        LEDarray_disp_bin((get16bitTMR0val()>>8)); //Only shows 8 MSB
-                
+        LEDarray_disp_bin((get16bitTMR0val()>>8)); //Only shows 8 MS              
     }
 }
