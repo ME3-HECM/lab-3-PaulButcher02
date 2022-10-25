@@ -7,6 +7,7 @@
       <itemPath>comparator.h</itemPath>
       <itemPath>interrupts.h</itemPath>
       <itemPath>timers.h</itemPath>
+      <itemPath>../lab-2-PaulButcher02.X/LEDarray.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -15,10 +16,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.c</itemPath>
       <itemPath>comparator.c</itemPath>
       <itemPath>interrupts.c</itemPath>
       <itemPath>timers.c</itemPath>
+      <itemPath>main.c</itemPath>
+      <itemPath>../lab-2-PaulButcher02.X/LEDarray.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -28,6 +30,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>.</Elem>
+    <Elem>../lab-2-PaulButcher02.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

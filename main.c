@@ -15,8 +15,19 @@
 
 void main(void) {
 	//call your initialisation functions to set up the hardware modules
-
+    DAC_init();
+    Comp1_init();
+    Interrupts_init();
+        
     while (1) {
 		
+        if (triggered==1){ //if interrupt occurred, other LED turns on (experimenting with global variables)
+            __delay_ms(50);
+            LATDbits.LATD7=1;
+            triggered=0;
+        }
+        Sleep(); 
+        LATDbits.LATD7=0; //This code proves that the processor has gone to sleep since the LED doesn't turn off
+        __delay_ms(100)
     }
 }
