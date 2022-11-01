@@ -27,7 +27,7 @@ void Timer0_init(void)
 ************************************/
 unsigned int get16bitTMR0val(void)
 {
-    unsigned int disp_val=TMR0L;
+    unsigned int disp_val=TMR0L; //First reading TMR0L to ensure TMR0H will read correctly
     disp_val|=(TMR0H<<8); //Bit shifting TMR0H to become a 16 bit number with 8 empty LSB, and then combine with TMR0LS
 
     return disp_val;
